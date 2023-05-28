@@ -5,18 +5,7 @@ for i,v in pairs(game.Workspace:GetChildren()) do
         v:Destroy()
     end
 end
-for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-    if v:IsA("MeshPart") then
-        v.Transparency = 1
-    end
-    if v:IsA("Part") then
-        v.Transparency = 1
-    end
-    if v:IsA("Accessory") then
-        v:Destroy()
-    end
-    game.Players.LocalPlayer.Character.Head.face.Transparency = 1
-end
+
 for i,v in pairs(Ambush:GetChildren()) do
     if v.Name == "Highlight" then
         v.Enabled = true
@@ -41,10 +30,11 @@ local function GetNearestPlayer()
 	end
 	return Player
 end 
+_G.enabled = true
 
-while RunService.Heartbeat:Wait() do
+while _G.enabled == true do
 	local NearestPlayer = GetNearestPlayer()
 	if NearestPlayer == nil then continue end
 	Model:SetPrimaryPartCFrame(CFrame.new(Model.PrimaryPart.Position, NearestPlayer.Character.PrimaryPart.Position))
 end 
-
+Ambush:Destroy()
