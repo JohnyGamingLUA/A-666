@@ -13,13 +13,13 @@ local entity = Spawner.createEntity({
     NoDieOnCrouching = false,
     NoHiding = false,
     AntiCrucifix = true,
-    KillRange = 15,
+    KillRange = 50,
     OneRoom = false,
     DieOnLook = false,
     BreakLights = false,
     BackwardsMovement = false,
      MovementDeath = {
-        true, -- Turned On?
+        false, -- Turned On?
         '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
     },
     FlickerLights = {
