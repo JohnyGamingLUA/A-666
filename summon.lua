@@ -1,7 +1,7 @@
 if game.Players.LocalPlayer.Character.Humanoid.WalkSpeed > 20 then
   tospawn = 9
 else
-  tospawn = math.random(1, 10)
+  tospawn = math.random(1, 9)
 end
 print(game.Players.LocalPlayer.Character.Humanoid.WalkSpeed)
 --[[
